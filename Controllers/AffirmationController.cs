@@ -26,5 +26,26 @@ namespace FinalProject.Controllers
             return View(affirmation);
         }
 
+        public IActionResult UpdateAffirmationTxt(int id)
+        {
+            Affirmation affirm = repo.GetAffirmation(id);
+
+            if (affirm == null)
+            {
+                return View("AffirmationNotFound");
+            }
+
+            return View(affirm);
+        }
+
+        public IActionResult UpdateAffirmationToDatabase(Affirmation affirmation)
+        {
+            repo.UpdateAffirmationTxt(affirmation);
+
+            return RedirectToAction("ViewAffirmation", new { id = affirmation.ID });
+        }
+
+
+
     }
 }

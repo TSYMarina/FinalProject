@@ -28,8 +28,9 @@ namespace FinalProject
 
         public void UpdateAffirmationTxt(Affirmation affirmation)
         {
-            _conn.Execute("UPDATE affirmations SET AffirmationText = @affirmTxt WHERE ID = @id",
-                 new { affirmationTxt = affirmation.AffirmationText, id = affirmation.ID });
+            //if()
+            _conn.Execute("UPDATE affirmations SET AffirmationText = @AffirmationText WHERE ID = @id",
+                 new { affirmationText = affirmation.AffirmationText, id = affirmation.ID });
         }
 
     }
