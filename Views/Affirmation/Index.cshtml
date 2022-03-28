@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Affirmation>
+
+<h2>Affirmations</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>An Affirmation</th>
+        <th>Category</th>
+        <th>Author</th>
+    </tr>
+
+    @foreach (var affirmation in Model)
+    {
+        <tr>
+            <td><a href=/Affirmation/ViewAffirmation/@affirmation.ID>@affirmation.ID</a></td>
+            <td>@affirmation.AffirmationText</td>
+            <th>@affirmation.Category</th>
+            <th>@affirmation.Author</th>
+        </tr>
+
+    }
+</table>
