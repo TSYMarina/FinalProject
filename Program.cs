@@ -14,8 +14,7 @@ namespace FinalProject
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-            QuoteGenerator.ProgrammingQuote();
+            CreateHostBuilder(args).Build().Run();       
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -24,11 +23,5 @@ namespace FinalProject
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-
-
-        
-
-
-
     }
 }

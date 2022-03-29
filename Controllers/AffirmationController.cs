@@ -65,12 +65,13 @@ namespace FinalProject.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult DisplayQuote()
-        {
-            var model = QuoteGenerator.ProgrammingQuote();
-            return View(model);
-        }
+        //public IActionResult DisplayQuote()
+        //{
+        //    var quote = QuoteGenerator.ProgrammingQuote();
+        //    return View(quote);
+        //}
 
+        
 
     }
 
