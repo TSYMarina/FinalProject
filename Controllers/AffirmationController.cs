@@ -45,7 +45,34 @@ namespace FinalProject.Controllers
             return RedirectToAction("ViewAffirmation", new { id = affirmation.ID });
         }
 
+        public IActionResult DeleteAffirmation(Affirmation affirmation)
+        {
+            repo.DeleteAffirmation(affirmation);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult InsertAffirmation()
+        {
+            var affirm = repo.AssignCategory();
+
+            return View(affirm);
+        }
+
+        public IActionResult InsertAffirmationToDatabase (Affirmation affirm)
+        {
+            repo.InsertAffirmation(affirm);
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DisplayQuote()
+        {
+            var model = QuoteGenerator.ProgrammingQuote();
+            return View(model);
+        }
 
 
     }
+
+
 }

@@ -10,7 +10,10 @@ namespace FinalProject
     {
         public IEnumerable<Affirmation> GetAllAffirmations();
         public Affirmation GetAffirmation(int id);
-
         public void UpdateAffirmationTxt(Affirmation affirmation);
+        public void DeleteAffirmation(Affirmation affirmation);
+        public void InsertAffirmation(Affirmation affirmToInsert);
+        public IEnumerable<Category> GetCategories();
+        public Affirmation AssignCategory();
     }
 }

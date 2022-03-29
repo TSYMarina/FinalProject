@@ -1,5 +1,4 @@
 ﻿@model Affirmation
-
 <h4>Make changes in the text window and press Update to save.</h4>
 
 @using (Html.BeginForm("UpdateAffirmationToDatabase", "Affirmation", "Post"))
@@ -8,8 +7,9 @@
 
     <label asp-for="AffirmationText" class="control-label">Affirmation Detail</label>
 
-    <input type="text" affirmationText="AffirmationText" class="form-control" value="@Model.AffirmationText" />
+    <input asp-for="Category" type="hidden" value="@Model.Category" />
 
-    <input type="submit" value="Update Affirmation" class="btn btn-primary" />
-
+    <input asp-for="AffirmationText" type="text" affirmationText="AffirmationText" class="form-control" value="@Model.AffirmationText" />
+        
+    <input type="submit" value="Update Affirmation" class="btn btn-primary" style="padding: 2px"/>
 }

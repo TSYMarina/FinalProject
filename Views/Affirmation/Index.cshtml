@@ -1,12 +1,19 @@
 ﻿@model IEnumerable<Affirmation>
 
 <h2>Affirmations</h2>
+<br>
+<br>
+<div style="display: block">
+    <a href="/Affirmation/InsertAffirmation/">Create a New Affirmation</a>
+</div>
+<br>
+<br>
+
 <table class="table">
     <tr>
         <th>ID</th>
         <th>An Affirmation</th>
         <th>Category</th>
-        <th>Author</th>
     </tr>
 
     @foreach (var affirmation in Model)
@@ -15,8 +22,8 @@
             <td><a href=/Affirmation/ViewAffirmation/@affirmation.ID>@affirmation.ID</a></td>
             <td>@affirmation.AffirmationText</td>
             <th>@affirmation.Category</th>
-            <th>@affirmation.Author</th>
         </tr>
-
     }
 </table>
+
+

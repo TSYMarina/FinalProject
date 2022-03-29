@@ -1,0 +1,23 @@
+﻿@model Affirmation
+<h2>Create a New Affirmation</h2>
+@using (Html.BeginForm("InsertAffirmationToDatabase", "Affirmation", "Post"))
+{
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+
+    <label asp-for="AffirmationText" class="control-label">Add an inspiring or reassuring text</label>
+
+    <input asp-for="AffirmationText" type="text" name="AffirmationText" class="form-control" value="" />
+
+    <div class="form-group">
+        <label for="">Select a Category</label>
+        <select class="form-control" name="Category" value="">
+            @foreach (var cat in Model.Categories)
+            {
+                <option value="@cat.CategoryName">@cat.CategoryName</option>
+            }
+        </select>
+    </div>
+    <input type="submit" value="Create Affirmation" class="btn btn-primary" />
+}
+
+
