@@ -20,7 +20,8 @@ namespace FinalProject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var quote = QuoteGenerator.ProgrammingQuote();
+            return View("Index", quote);
         }
 
         public IActionResult Privacy()

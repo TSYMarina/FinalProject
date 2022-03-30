@@ -19,7 +19,7 @@ namespace FinalProject
             var author = JArray.Parse(apiResponse)[r]["author"].ToString();
             var line = JArray.Parse(apiResponse)[r]["en"].ToString();
             
-            var quote = $"Programming quote: { line} by { author }";
+            var quote = $"\"{ line}\" - By { author }";
             return quote;
         }
     }
