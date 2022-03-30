@@ -4,15 +4,90 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    .multicolortext {
+        background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+</style>
+
 <div class="text-center">
-    <h1 class="display-4">Today will be another great day of solving probelms, learning new technologies and tricks, coding and not stressing over any of it.</h1>
+    <h1 class="display-4"></h1>
+    <h3 style="font-family: Arial Black">Today will be another great day of solving probelms, learning new technologies, coding. AND <strong>not stressing</strong> over any of it.</h3>
     <p>
-        <br></br>
-       
-        </p>
-       <p>
-           @Model
-       </p>
-        
+        <br>
+
+    </p>
+    <p>
+        @Model
+    </p>
+    <h2>
+        <a class="btn-hover color-8" asp-area="" asp-controller="ProgrammingQuotes" asp-action="GetQuote">Get New Quote</a>
+    </h2>
+    <br>
+    <br>
+    <h3> <span class="multicolortext">Relaxation with Music</span></h3>
+    <br>
+
+    <table class="table">
+        <tr>
+            <th><button class="btn-hover color-4"><a target="_blank" href="https://www.youtube-nocookie.com/embed/_4kHxtiuML0">Play FOCUS video in a separate window</a></button></th>
+            <th><button class="btn-hover color-6"><a target="_blank" href="https://www.youtube-nocookie.com/embed/5BcMmy_YR6M">Play ENERGY FLOW video in a separate window</a></button></th>
+
+        </tr>
+
+        <tr>
+            <td>
+                <iframe width="400" height="235" src="https://www.youtube-nocookie.com/embed/_4kHxtiuML0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+
+            </td>
+            <td>
+                <iframe width="400" height="235" src="https://www.youtube-nocookie.com/embed/5BcMmy_YR6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+
+            </td>
+
+    </table>
+
+    <table class="table">
+        <tr>
+            <th><button class="btn-hover color-5"><a target="_blank" href="https://www.youtube-nocookie.com/embed/zJNMNENMES4">POSITIVE VIBRATIONS - separate window</a></button></th>
+            <th><button class="btn-hover color-3"><a target="_blank" href="https://www.youtube-nocookie.com/embed/3q8thydY9bI">POSITIVE VIBRATIONS - separate window</a></button></th>
+
+        </tr>
+        <td>
+            <iframe width="400" height="235" src="https://www.youtube-nocookie.com/embed/zJNMNENMES4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            <br>
+        </td>
+
+        <td><iframe width="400" height="235" src="https://www.youtube-nocookie.com/embed/3q8thydY9bI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+
+        </tr>
+    </table>
+
+    <table class="table">
+        <h3>Helpful Tutorials</h3>
+
+        <tr>
+            <th>ASP .NET</th>
+            <th>APIs and Postman</th>
+
+        </tr>
+    </table>
+    <table class="table">
+        <td><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JfnTG955cuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+
+
+        <td><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VywxIQ2ZXw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+
+    </table>
+
+
+
 </div>
 

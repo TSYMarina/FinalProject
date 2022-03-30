@@ -19,9 +19,9 @@
     @foreach (var affirmation in Model)
     {
         <tr>
-            <td><a href=/Affirmation/ViewAffirmation/@affirmation.ID>@affirmation.ID</a></td>
+            <td><a class="btn-hover color-7" href=/Affirmation/ViewAffirmation/@affirmation.ID>@affirmation.ID</a></td>
             <td>@affirmation.AffirmationText</td>
-            <th>@affirmation.Category</th>
+            <td>@affirmation.Category</td>
         </tr>
     }
 </table>
