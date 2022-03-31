@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Affirmation>
 
-<h2>Affirmations</h2>
+<h2 style="background-image: url('~/images/01.jpg');">Affirmations</h2>
 <br>
 <br>
 <div style="display: block">
@@ -8,14 +8,14 @@
 </div>
 <br>
 <br>
-
-<table class="table">
+<div>
+<table>
     <tr>
         <th>ID</th>
         <th>An Affirmation</th>
         <th>Category</th>
     </tr>
-
+ 
     @foreach (var affirmation in Model)
     {
         <tr>
@@ -23,7 +23,8 @@
             <td>@affirmation.AffirmationText</td>
             <td>@affirmation.Category</td>
         </tr>
+   
     }
 </table>
-
+     </div>
 
