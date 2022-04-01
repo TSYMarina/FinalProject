@@ -55,13 +55,36 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
+
+    .myInput {
+        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 100%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+        padding: 12px 20px 12px 40px; /* Add some padding */
+        border: 1px solid #ddd; /* Add a grey border */
+        margin-bottom: 12px; /* Add some space below the input */
+    }
+
+    #myTable tr.header, #myTable tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .label{
+        margin-bottom: 25px;
+        padding:15px;
+        font-size: 20px;
+        display:block;
+    }
+
 </style>
 
 
-<head>
+<header>
     <h2 class="affindexheader" style="background-image: url('/images/08.jpg');">Affirmations</h2>
 
-</head>
+</header>
 
 <body>
 
@@ -70,8 +93,17 @@
     </div>
     <br>
     <br>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-inline pull-right">
+                <label class="label"">Filter</label>
+                <input type="text" class="form-control" id="myInput" onkeyup="displayChosen()" placeholder="Filter by category">
+            </div>
+        </div>
+    </div>
+    <br>
     <div>
-        <table>
+        <table id="myTable" style="padding: 30px">
             <tr>
                 <th>ID</th>
                 <th>An Affirmation</th>
@@ -90,4 +122,5 @@
         </table>
     </div>
 
+    <script src="~/js/site.js" displayChosen()></script>
 </body>

@@ -1,4 +1,6 @@
-﻿// function([string1, string2],target id,[color1,color2])    
+﻿
+
+// Typewrite effect text - Home page -- function([string1, string2],target id,[color1,color2])
 consoleText(['HUMOR is a Great Booster', 'Spend time on entertainment to reward yourself daily'], 'text', ['tomato', 'rebeccapurple', 'lightblue']);
 
 function consoleText(words, id, colors) {
@@ -49,3 +51,29 @@ function consoleText(words, id, colors) {
         }
     }, 400)
 }
+
+//filtering affirmations by Category
+<script>
+<function displayChosen() {
+
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByCategory("tr");
+
+
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsById ("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+
+    }
+}
+    </script>
