@@ -1,10 +1,10 @@
 ﻿@model ProgrammingQuotes
 
-<h2>Display Quote</h2>
+<h1>Display Quote</h1>
 
 
 @using (Html.BeginForm("Index", "ProgrammingQuotesController", "Get"))
 {
 
-    <h2><label asp-for="Quote" type="text" value="@Model.Quote" /></h2>
+    <h1><label asp-for="Quote" type="text" value="@Model.Quote" /></h1>
 }

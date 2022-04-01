@@ -1,7 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand{
+a.navbar-brand {
     white-space: normal;
     word-break: break-all;
     line-height: 10px;
@@ -11,11 +11,11 @@ a.navbar-brand{
     display: inline-block;
     position: relative;
     z-index: 1;
-    text-decoration: solid;
+    text-decoration: wavy;
     text-transform: uppercase;
     text-align: left;
-    color: rebeccapurple;
-    cursor:context-menu;
+    color: navy;
+    cursor: context-menu;
 }
 
 .navcustom {
@@ -26,12 +26,11 @@ a.navbar-brand{
     background-color: #34495e;
     border-radius: 8px;
     font-size: 15px;
-    cursor:grab;
+    color: white;
+    cursor: grab;
 }
 
 
-
-}
 /* Provide sufficient contrast against white background */
 a {
     color: #0366d6;
@@ -85,16 +84,46 @@ html {
     min-height: 100%;
 }
 
-body {
+/*body {*/
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+    
+}*/
+
+.text_wrapper h3 {
+    overflow: hidden;
+    border-right: .15em solid rgb(87, 56, 56);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 5px;
+    font-size: 6vw;
+    animation:
+        typing 3.5s steps(20, end),
+        animated-cursor 0.5s step-end infinite;
 }
 
+@keyframes typing{
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes animated-cursor{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(87, 56, 56) }
+}
+
+
+
 .footer {
+    background-image: url(images/sky.jpg);
+    background-size: cover;
     position: absolute;
     bottom: 0;
     width: 100%;
-    white-space: nowrap;
+    //white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
 }
 
@@ -104,6 +133,14 @@ body {
     box-sizing: border-box;
 }
 
+
+
+
+.crtbtn:focus {
+    box-shadow: 0 3px 0px #1a1a1a;
+}
+
+}
 .buttons {
     margin: 10%;
     text-align: center;
