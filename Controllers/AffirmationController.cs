@@ -66,13 +66,6 @@ namespace FinalProject.Controllers
             return RedirectToAction("Index");
         }
 
-        //public PartialViewResult DisplayChosen (string searchTxt)
-        //{
-        //    var affirmations = repo.GetAllAffirmations();
-        //    var result = affirmations.Where(a => a.Category.ToLower().Contains(searchTxt));
-        //    return PartialView("FilteredTable", result);
-        //}
-
     }
 
 

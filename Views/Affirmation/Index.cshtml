@@ -115,15 +115,7 @@
 <br>
 <br />
 
-<div class="row">
-    <div class="col-sm-12">
-        <div class="form-inline pull-right">
-            <label class="label">Filter</label>
-            <input type="text" class="form-control" id="txtSearch" placeholder="Filter by category">
-        </div>
-    </div>
-</div>
-<br>
+
 <div>
     <table id="myTable" style="padding: 30px ">
         <tr>
@@ -144,33 +136,4 @@
     </table>
 
 </div>
-@*
-    <script>
-    $(() => {
-    GetAllAffirmations();
-
-    $('#txtSearch').on('keyup', () => {
-    GetAllAffirmations();
-    });
-
-    });
-    
-    function displayChosen() {
-    $.ajax.GetAllAffirmations({
-    url: "@Url.Action("DisplayChosen", "Index")",
-    datatype: 'html',
-    method: 'GET',
-    data: { searchTxt : $('#txtSearch').val() },
-    success: function(res) {
-    $('#grdInput').html('').html(res);
-    },
-    error: function(err){
-    console.log(err);
-    }
-    })
-    }
-
-    </script>
-
-*@
 

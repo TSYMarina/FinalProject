@@ -1,5 +1,15 @@
 ﻿@model Affirmations
+
+<style>
+.crbody{
+    background-image: url("/images/nature2.jpg");
+   
+}
+</style>
+
+<body class=crbody>
 <h2>Create a New Affirmation</h2>
+
 @using (Html.BeginForm("InsertAffirmationToDatabase", "Affirmation", "Post"))
 {
     <input asp-for="ID" type="hidden" value="@Model.ID" />
@@ -20,4 +30,4 @@
     <input type="submit" value="Create Affirmation" class="btn btn-primary" />
 }
 
-
+</body>
