@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+
     <header>
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-7 bg-light">
@@ -36,20 +37,22 @@
 
 
     <div class="container">
-        <main role="main" class="pb-3" style="background-image: url('~/images/01.jpg');">
+        <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-
-    <footer class="border-top footer text-muted">
+ <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - FinalProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+   
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-</html>
+
+
+    </html>

@@ -1,9 +1,5 @@
 ﻿@model IEnumerable<Affirmations>
 
-@{
-    ViewBag.Title = "Affirmations List";
-}
-
 <style>
     .tbbtn {
         border-radius: 4px;
@@ -71,14 +67,8 @@
         margin-bottom: 12px; /* Add some space below the input */
     }
 
-    .tbheader:{
-        text-align: center;
-    }
-
-
     #myTable tr.header, #myTable tr:hover {
         background-color: #f1f1f1;
-        position:center;
     }
 
     .label {
@@ -88,89 +78,29 @@
         display: block;
     }
 
-    .affirm, #td, #td{
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 19px;
-        text-indent:10px;
-        
-        border: 0.5px groove white;
-       
-
-
-    }
-
 </style>
 
 
-<header>
-    <h2 class="affindexheader" style="background-image: url('/images/08.jpg');">Affirmations</h2>
-
-</header>
-
-
-
-<div>
-    <a class="crtbtn" href="/Affirmation/InsertAffirmation/">Create a New Affirmation</a>
-</div>
-<br>
-<br />
-
-<div class="row">
-    <div class="col-sm-12">
-        <div class="form-inline pull-right">
-            <label class="label">Filter</label>
-            <input type="text" class="form-control" id="txtSearch" placeholder="Filter by category">
-        </div>
-    </div>
-</div>
-<br>
-<div>
-    <table id="myTable" style="padding: 30px ">
+<div id="grdInput">
+    <table id="myTable" style="padding: 30px">
         <tr>
-            <th class="tbheader">ID</th>
-            <th class="tbheader">An Affirmation</th>
-            <th class="tbheader">Category</th>
+            <th>ID</th>
+            <th>An Affirmation</th>
+            <th>Category</th>
         </tr>
 
         @foreach (var affirmation in Model)
         {
             <tr>
                 <td><a class="tbbtn" href=/Affirmation/ViewAffirmation/@affirmation.ID>@affirmation.ID</a></td>
-                <td class="affirm">@affirmation.AffirmationText</td>
+                <td>@affirmation.AffirmationText</td>
                 <td style="text-align:right">@affirmation.Category</td>
             </tr>
 
         }
     </table>
-
 </div>
-@*
-    <script>
-    $(() => {
-    GetAllAffirmations();
 
-    $('#txtSearch').on('keyup', () => {
-    GetAllAffirmations();
-    });
-
-    });
-    
-    function displayChosen() {
-    $.ajax.GetAllAffirmations({
-    url: "@Url.Action("DisplayChosen", "Index")",
-    datatype: 'html',
-    method: 'GET',
-    data: { searchTxt : $('#txtSearch').val() },
-    success: function(res) {
-    $('#grdInput').html('').html(res);
-    },
-    error: function(err){
-    console.log(err);
-    }
-    })
-    }
-
-    </script>
-
-*@
-
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>

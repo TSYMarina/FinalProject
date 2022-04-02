@@ -8,12 +8,12 @@ namespace FinalProject
 {
     public interface IAffirmationRepo
     {
-        public IEnumerable<Affirmation> GetAllAffirmations();
-        public Affirmation GetAffirmation(int id);
-        public void UpdateAffirmationTxt(Affirmation affirmation);
-        public void DeleteAffirmation(Affirmation affirmation);
-        public void InsertAffirmation(Affirmation affirmToInsert);
+        public IEnumerable<Affirmations> GetAllAffirmations();
+        public Affirmations GetAffirmation(int id);
+        public void UpdateAffirmationTxt(Affirmations affirmation);
+        public void DeleteAffirmation(Affirmations affirmation);
+        public void InsertAffirmation(Affirmations affirmToInsert);
         public IEnumerable<Category> GetCategories();
-        public Affirmation AssignCategory();
+        public Affirmations AssignCategory();
     }
 }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace FinalProject
 {
-    public class Affirmation
+    public class Affirmations
     {
         public string AffirmationText { get; set; }
         public string Category { get; set; }

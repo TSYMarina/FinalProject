@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FinalProject.Models;
+using System.Linq;
 
 namespace FinalProject.Controllers
 {
@@ -28,7 +29,7 @@ namespace FinalProject.Controllers
 
         public IActionResult UpdateAffirmationTxt(int id)
         {
-            Affirmation affirm = repo.GetAffirmation(id);
+            Affirmations affirm = repo.GetAffirmation(id);
 
             if (affirm == null)
             {
@@ -38,14 +39,14 @@ namespace FinalProject.Controllers
             return View(affirm);
         }
 
-        public IActionResult UpdateAffirmationToDatabase(Affirmation affirmation)
+        public IActionResult UpdateAffirmationToDatabase(Affirmations affirmation)
         {
             repo.UpdateAffirmationTxt(affirmation);
 
             return RedirectToAction("ViewAffirmation", new { id = affirmation.ID });
         }
 
-        public IActionResult DeleteAffirmation(Affirmation affirmation)
+        public IActionResult DeleteAffirmation(Affirmations affirmation)
         {
             repo.DeleteAffirmation(affirmation);
             return RedirectToAction("Index");
@@ -58,12 +59,19 @@ namespace FinalProject.Controllers
             return View(affirm);
         }
 
-        public IActionResult InsertAffirmationToDatabase (Affirmation affirm)
+        public IActionResult InsertAffirmationToDatabase (Affirmations affirm)
         {
             repo.InsertAffirmation(affirm);
 
             return RedirectToAction("Index");
         }
+
+        //public PartialViewResult DisplayChosen (string searchTxt)
+        //{
+        //    var affirmations = repo.GetAllAffirmations();
+        //    var result = affirmations.Where(a => a.Category.ToLower().Contains(searchTxt));
+        //    return PartialView("FilteredTable", result);
+        //}
 
     }
 
