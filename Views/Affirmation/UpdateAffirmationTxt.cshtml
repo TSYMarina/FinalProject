@@ -1,15 +1,61 @@
 ﻿@model Affirmations
-<h4>Make changes in the text window and press Update to save.</h4>
 
-@using (Html.BeginForm("UpdateAffirmationToDatabase", "Affirmation", "Post"))
-{
-    <input asp-for="ID" type="hidden" value="@Model.ID" />
 
-    <label asp-for="AffirmationText" class="control-label">Affirmation Detail</label>
 
-    <input asp-for="Category" type="hidden" value="@Model.Category" />
 
-    <input asp-for="AffirmationText" type="text" affirmationText="AffirmationText" class="form-control" value="@Model.AffirmationText" />
-        
-    <input type="submit" value="Update Affirmation" class="btn-hover color-1" />
-}
+<style>
+
+    .updbod {
+        background: url("/images/moon-1807743.jpg");
+    }
+    .x{
+        color:ghostwhite;
+        padding: 40px 0px;
+    }
+    .y{
+        color:ghostwhite;
+    }
+</style>
+
+<body class="updbod">
+    
+    <h4 class="x">Make changes in the text window and press Update to save.</h4>
+
+    @using (Html.BeginForm("UpdateAffirmationToDatabase", "Affirmation", "Post"))
+    {
+        <input asp-for="ID" type="hidden" value="@Model.ID" />
+
+        <label asp-for="AffirmationText" class="control-label y">Affirmation Text:</label>
+
+        <input asp-for="Category" type="hidden" value="@Model.Category" />
+
+        <input asp-for="AffirmationText" type="text" affirmationText="AffirmationText" class="form-control" value="@Model.AffirmationText" />
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Update Affirmation" class="btn-hover color-1" />
+    }
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>

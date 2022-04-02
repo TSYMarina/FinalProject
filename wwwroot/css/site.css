@@ -101,10 +101,10 @@ html {
     margin: 0 auto;
     letter-spacing: 5px;
     font-size: 6vw;
-    animation: typing 3.5s steps(20, end), animated-cursor 0.5s step-end infinite;
+    animation: typing 2s steps(20, end), animated-cursor 0.5s step-end infinite;
 }
 
-@keyframes typing {
+@@keyframes typing {
     from {
         width: 0
     }
@@ -114,7 +114,7 @@ html {
     }
 }
 
-@keyframes animated-cursor {
+@@keyframes animated-cursor {
     from, to {
         border-color: transparent
     }
@@ -127,29 +127,30 @@ html {
 
 
 
-    .footer {
-        background-image: none;
-        /*background-size: cover;*/
-        background-color: white;
-        /*position: absolute;*/
-        bottom: 0;
-        width: 100%;
-        white-space: nowrap;
-        line-height: 60px; /* Vertically center the text there */
-    }
+.footer {
+    background-image: none;
+    /*background-size: cover;*/
+    background-color: white;
+    /*position: absolute;*/
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
 
-    * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 
-    .crtbtn:focus {
-        box-shadow: 0 3px 0px #1a1a1a;
-    }
+
+
+.crtbtn:focus {
+    box-shadow: 0 3px 0px #1a1a1a;
+}
+
 }
 
 .buttons {

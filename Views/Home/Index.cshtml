@@ -8,12 +8,12 @@
 
 <style>
     /*    .multicolortext {
-                                            background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
-                                            -webkit-background-clip: text;
-                                            -moz-background-clip: text;
-                                            background-clip: text;
-                                            color: transparent;
-                                        }*/
+                                                background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+                                                -webkit-background-clip: text;
+                                                -moz-background-clip: text;
+                                                background-clip: text;
+                                                color: transparent;
+                                            }*/
 
     .header {
         text-align: center;
@@ -56,8 +56,12 @@
         left: 10px;
     }
 
+    .humor{
+        padding-block: 40px;
+    }
+
     body {
-        background: url("images/cloud-blue-sky.jpg") no-repeat center center fixed; 
+        background: url("images/cloud-blue-sky.jpg") no-repeat center center fixed;
         background-color: white;
     }
 
@@ -78,17 +82,14 @@
         </h4>
     </div>
 
+    <div class="humor">
+        <div class="console-container">
+            <span id="text"></span><div class="console-underscore" id="console">&#95;</div>
+            <h5 class="card-title"><a target="_blank" href="https://programmerhumor.io/">Check out this webpage with Programming Jokes</a></h5>
 
-
-    <div class="card">
-        <div class=card-body>
-            <div class="console-container">
-                <span id="text"></span><div class="console-underscore" id="console">&#95;</div>
-                <h5 class="card-title"><a target="_blank" href="https://programmerhumor.io/">Check out this webpage with Programming Jokes</a></h5>
-
-            </div>
         </div>
     </div>
+
 
 
 
@@ -112,9 +113,9 @@
     </table>
 </body>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 
 
 
