@@ -7,13 +7,7 @@
 
 
 <style>
-    /*    .multicolortext {
-                                                background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
-                                                -webkit-background-clip: text;
-                                                -moz-background-clip: text;
-                                                background-clip: text;
-                                                color: transparent;
-                                            }*/
+
 
     .header {
         text-align: center;
@@ -22,7 +16,14 @@
         margin-bottom: 24px;
         padding: 2px 60px;
         font-family: Arial Black, sans-serif;
-        color: navy;
+
+    }
+        .multicolortext {
+        background-image: linear-gradient(to left, navy, indigo, deepskyblue, blue, darkslateblue, dodgerblue, blueviolet);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 
     body {
@@ -56,7 +57,7 @@
         left: 10px;
     }
 
-    .humor{
+    .humor {
         padding-block: 40px;
     }
 
@@ -65,12 +66,21 @@
         background-color: white;
     }
 
+    .myAdvice{
+        border: 60px;
+    }
+
+    .vidtable{
+        border-spacing:60px;
+        margin-top: 150px;
+    }
+
 </style>
 
 <body>
 
     <div class="header">
-        Today will be another great day of solving probelms, learning new technologies, coding. AND <strong>not stressing</strong> over any of it.
+       <h1 class="multicolortext">Today will be another great day of solving probelms, learning new technologies, coding. AND <strong>not stressing</strong> over any of it.</h1> 
     </div>
 
 
@@ -82,6 +92,8 @@
         </h4>
     </div>
 
+   
+
     <div class="humor">
         <div class="console-container">
             <span id="text"></span><div class="console-underscore" id="console">&#95;</div>
@@ -89,11 +101,14 @@
 
         </div>
     </div>
+     <div class="myAdivce">
+        <h4> Words of wisdom from a beat up almost-alumni to come... </h4>
+    </div>
 
 
 
 
-    <table class="table text-center">
+    <table class="table text-center vidtable">
         <tr>
             <th><button class="btn-hover color-4"><a target="_blank" href="https://www.youtube-nocookie.com/embed/_4kHxtiuML0">Play FOCUS video in a separate window</a></button></th>
             <th><button class="btn-hover color-6"><a target="_blank" href="https://www.youtube-nocookie.com/embed/5BcMmy_YR6M">Play ENERGY FLOW video in a separate window</a></button></th>

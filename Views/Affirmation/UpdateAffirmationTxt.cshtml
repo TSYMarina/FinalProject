@@ -6,36 +6,51 @@
 <style>
 
     .updbod {
-        background: url("/images/moon-1807743.jpg");
+        background: url("/images/heart-shaped-clouds-background.jpg") no-repeat center;
     }
-    .x{
-        color:ghostwhite;
+
+    .helptext {
+        color: navy;
         padding: 40px 0px;
     }
-    .y{
-        color:ghostwhite;
+
+    .helptext2 {
+        color: navy;
+    }
+
+    .updbtn {
+        height: 50px;
+        position: relative;
+    }
+
+    .hrcenter {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 </style>
 
 <body class="updbod">
-    
-    <h4 class="x">Make changes in the text window and press Update to save.</h4>
+
+    <h4 class="helptext">Make changes in the text window and press Update to save.</h4>
 
     @using (Html.BeginForm("UpdateAffirmationToDatabase", "Affirmation", "Post"))
     {
         <input asp-for="ID" type="hidden" value="@Model.ID" />
 
-        <label asp-for="AffirmationText" class="control-label y">Affirmation Text:</label>
+        <label asp-for="AffirmationText" class="control-label helptext2">Affirmation Text:</label>
 
         <input asp-for="Category" type="hidden" value="@Model.Category" />
 
         <input asp-for="AffirmationText" type="text" affirmationText="AffirmationText" class="form-control" value="@Model.AffirmationText" />
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <input type="submit" value="Update Affirmation" class="btn-hover color-1" />
+        <div class="updbtn">
+            <div class="hrcenter">
+                <input type="submit" value="Update Affirmation" class="btn-hover color-1" />
+            </div>
+        </div>
     }
 
     <br>

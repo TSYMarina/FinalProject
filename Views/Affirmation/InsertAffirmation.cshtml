@@ -1,33 +1,51 @@
 ﻿@model Affirmations
 
 <style>
-.crbody{
-    background-image: url("/images/nature2.jpg");
-   
-}
+
+    .createheader {
+        color: navy;
+        font-feature-settings: "swsh";
+        padding-top: 50px;
+    }
+
+    .hrcenter {
+
+    }
+
+    .crbody {
+        background-image: url("/images/nature2.jpg");
+    }
+
+    .label {
+        color: black;
+        font-feature-settings: "swsh";
+        padding-top: 50px;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+    }
+
 </style>
 
-<body class=crbody>
-<h2>Create a New Affirmation</h2>
+<body class="crbody">
+    <div class="hrcenter">
+        <h2 class="createheader">Create a New Affirmation</h2>
 
-@using (Html.BeginForm("InsertAffirmationToDatabase", "Affirmation", "Post"))
-{
-    <input asp-for="ID" type="hidden" value="@Model.ID" />
+        @using (Html.BeginForm("InsertAffirmationToDatabase", "Affirmation", "Post"))
+        {
+            <input asp-for="ID" type="hidden" value="@Model.ID" />
 
-    <label asp-for="AffirmationText" class="control-label">Add an inspiring or reassuring text</label>
+            <input asp-for="AffirmationText" type="text" name="AffirmationText" class="form-control" value="" placeholder="Add an inspiring or reassuring text" />
 
-    <input asp-for="AffirmationText" type="text" name="AffirmationText" class="form-control" value="" />
-
-    <div class="form-group">
-        <label for="">Select a Category</label>
-        <select class="form-control" name="Category" value="">
-            @foreach (var cat in Model.Categories)
-            {
-                <option value="@cat.CategoryName">@cat.CategoryName</option>
-            }
-        </select>
+            <div class="form-group">
+                <label class="label">Select a Category</label>
+                <select class="form-control" name="Category" value="">
+                    @foreach (var cat in Model.Categories)
+                    {
+                        <option value="@cat.CategoryName">@cat.CategoryName</option>
+                    }
+                </select>
+            </div>
+            <input class="btn-hover.color-1" type="submit" value="Create New Afirmation" />
+        }
     </div>
-    <input type="submit" value="Create Affirmation" class="btn btn-primary" />
-}
-
 </body>

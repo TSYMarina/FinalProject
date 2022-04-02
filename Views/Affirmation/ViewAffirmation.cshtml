@@ -7,25 +7,56 @@
 }
 
 <style>
-    body {
-        font: white;
-        font-family: "Arial Rounded MT";
-        background: url("/images/moon-1807743.jpg") no-repeat center center fixed;
-        /*Stoic Script, Proxima Nova, Atrament, Adobe Garamond, PT Sans, Century School, Republic;*/
-
+    .affText {
+        color: white;
+        padding-block: 100px;
     }
 
+    body {
+        font-family: "Arial Rounded MT";
+        background: url("/images/unsplash.jpg") no-repeat center center fixed;
+        /*Stoic Script, Proxima Nova, Atrament, Adobe Garamond, PT Sans, Century School, Republic;*/
+    }
+
+/*    .updateAff {
+        height: 50px;
+        position: relative;
+        border: 1px;
+        box-shadow: 1px 5px 5px #1a1a1a;
+        transition: 0.25s;
+    }
+
+    .hrcenter {
+        padding-top: 25px;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .udbuttons {
+        width: 200px;
+        margin: 5px auto;
+        display: inline;
+        margin-right: 10%;
+    }
+
+    .action_btn {
+        width: 200px;
+        margin: 50px;
+        display: inline;
+    }*/
+
 </style>
-<br>
-<br>
+
 
 <body>
-    <h3 class="afftext logo-1">@Model.AffirmationText</h3>
-    <br>
-    <br>
-    <br>
+    <div class="affText">
+        <h3>@Model.AffirmationText</h3>
+    </div>
+
     <div style="display: block">
-        <a href="/Affirmation/UpdateAffirmationTxt/@Model.ID">Update this Affirmation Text</a>
+        <a href="/Affirmation/UpdateAffirmationTxt/@Model.ID" class="updateAff">Update this Affirmation Text</a>
     </div>
     <br>
     <br>
@@ -38,12 +69,23 @@
             <input style="padding:20px" type="submit" onclick="return confirm('Are you sure? We won't be able to restore it.')" value="Delete Affirmation" />
         }
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-  
-    <br>
-    <br>
+
+
+    @*   <div style="display: block">
+        @using (Html.BeginForm("DeleteAffirmation", "Affirmation", "Post"))
+        {
+        <input type="hidden" asp-for="ID" value="@Model.ID" />
+        <div class="udbuttons">
+        <div class="action_btn">
+        <a type="submit" href="/Affirmation/UpdateAffirmationTxt/@Model.ID" class="btn-hover.color-4" value="Update this Affirmation" />
+        <input type="submit" onclick="return confirm('Are you sure? We won't be able to restore it.')" value="Delete Affirmation" />
+        </div>
+        </div>
+        </div>*@
+
+
+
 </body>
+
+
 
