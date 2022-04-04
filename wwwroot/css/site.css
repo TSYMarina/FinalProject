@@ -20,7 +20,7 @@ a.navbar-brand {
 }
 
 .navcustom {
-    margin: 27px auto 0;
+    margin: 7px 10px 0;
     position: relative;
     width: auto;
     height: 40px;
@@ -85,24 +85,6 @@ html {
     min-height: 100%;
 }
 
-/*body {*/
-/* Margin bottom by footer height */
-/*margin-bottom: 60px;
-    padding-top: 20%;
-    display: flex;
-    justify-content: center;
-    
-}*/
-
-.text_wrapper h3 {
-    overflow: hidden;
-    border-right: .15em solid rgb(87, 56, 56);
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 5px;
-    font-size: 6vw;
-    animation: typing 2s steps(20, end), animated-cursor 0.5s step-end infinite;
-}
 
 @keyframes typing {
     from {
@@ -125,8 +107,6 @@ html {
 }
 
 
-
-
 .footer {
     background-image: none;
     /*background-size: cover;*/
@@ -144,14 +124,9 @@ html {
     box-sizing: border-box;
 }
 
-
-
-
 .crtbtn:focus {
     box-shadow: 0 3px 0px #1a1a1a;
 }
-
-
 
 .buttons {
     margin: 10%;
@@ -164,7 +139,7 @@ html {
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    margin: 20px;
+    margin: 10px;
     height: 65px;
     text-align: center;
     border: none;

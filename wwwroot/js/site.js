@@ -1,7 +1,6 @@
 ﻿
-
 // Typewrite effect text - Home page -- function([string1, string2],target id,[color1,color2])
-consoleText(['HUMOR is a Great Booster', 'Spend time on entertainment to reward yourself daily'], 'text', ['tomato', 'rebeccapurple', 'lightblue']);
+consoleText(['HUMOR is a Great Help!', 'This class opened', 'a whole new world of jokes!'], 'text', ['navy', 'rebeccapurple', 'darkgreen']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];

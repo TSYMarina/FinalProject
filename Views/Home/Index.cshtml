@@ -13,12 +13,13 @@
         text-align: center;
         font-size: 56px;
         line-height: 80px;
+        margin-top: 24px;
         margin-bottom: 24px;
         padding: 2px 60px;
         font-family: Arial Black, sans-serif;
-
     }
-        .multicolortext {
+
+    .multicolortext {
         background-image: linear-gradient(to left, navy, indigo, deepskyblue, blue, darkslateblue, dodgerblue, blueviolet);
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -59,6 +60,7 @@
 
     .humor {
         padding-block: 40px;
+        margin-top: 150px;
     }
 
     body {
@@ -66,12 +68,13 @@
         background-color: white;
     }
 
-    .myAdvice{
+    .myAdvice {
+        padding-top: 60px;
         border: 60px;
     }
 
-    .vidtable{
-        border-spacing:60px;
+    .vidtable {
+        border-spacing: 60px;
         margin-top: 150px;
     }
 
@@ -80,7 +83,7 @@
 <body>
 
     <div class="header">
-       <h1 class="multicolortext">Today will be another great day of solving probelms, learning new technologies, coding. AND <strong>not stressing</strong> over any of it.</h1> 
+        <h1 class="multicolortext">Today will be another great day of solving probelms, learning new technologies, coding. AND <strong>not stressing</strong> over any of it.</h1>
     </div>
 
 
@@ -88,24 +91,26 @@
         <h3 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">@Model</h3>
 
         <h4 style="margin-block: 10px">
-            <a class="btn-hover color-8" asp-area="" asp-controller="ProgrammingQuotes" asp-action="GetQuote">Get New Quote</a>
+            <a class="btn-hover color-8 height:50px" asp-area="" asp-controller="Home" asp-action="Index">Get New Quote</a>
         </h4>
     </div>
 
-   
-
-    <div class="humor">
-        <div class="console-container">
-            <span id="text"></span><div class="console-underscore" id="console">&#95;</div>
-            <h5 class="card-title"><a target="_blank" href="https://programmerhumor.io/">Check out this webpage with Programming Jokes</a></h5>
-
-        </div>
-    </div>
-     <div class="myAdivce">
+    <div class="myAdvice">
         <h4> Words of wisdom from a beat up almost-alumni to come... </h4>
     </div>
 
 
+
+    <div class="humor">
+        <div class="console-container">
+            <span id="text"></span><div class="console-underscore" id="console">&#95;</div>
+            <h5>
+                I have a good joke about programming, but it only works on my computer.
+            </h5>
+            <h5 class="card-title"><a target="_blank" href="https://programmerhumor.io/">Check out this webpage with Programming Jokes</a></h5>
+
+        </div>
+    </div>
 
 
     <table class="table text-center vidtable">

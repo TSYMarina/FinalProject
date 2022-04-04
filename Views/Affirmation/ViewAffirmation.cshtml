@@ -1,5 +1,7 @@
 ﻿@model Affirmations
 
+
+
 @{
     ViewBag.Title = "Update Affirmation";
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
@@ -14,43 +16,45 @@
 
     body {
         font-family: "Arial Rounded MT";
+        text-align: center;
         background: url("/images/unsplash.jpg") no-repeat center center fixed;
         /*Stoic Script, Proxima Nova, Atrament, Adobe Garamond, PT Sans, Century School, Republic;*/
     }
 
-/*    .updateAff {
-        height: 50px;
-        position: relative;
-        border: 1px;
-        box-shadow: 1px 5px 5px #1a1a1a;
-        transition: 0.25s;
-    }
+    /*    .updateAff {
+            height: 50px;
+            position: relative;
+            border: 1px;
+            box-shadow: 1px 5px 5px #1a1a1a;
+            transition: 0.25s;
+        }
 
-    .hrcenter {
-        padding-top: 25px;
-        position: absolute;
-        left: 50%;
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
+        .hrcenter {
+            padding-top: 25px;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
 
-    .udbuttons {
-        width: 200px;
-        margin: 5px auto;
-        display: inline;
-        margin-right: 10%;
-    }
+        .udbuttons {
+            width: 200px;
+            margin: 5px auto;
+            display: inline;
+            margin-right: 10%;
+        }
 
-    .action_btn {
-        width: 200px;
-        margin: 50px;
-        display: inline;
-    }*/
+        .action_btn {
+            width: 200px;
+            margin: 50px;
+            display: inline;
+        }*/
 
 </style>
 
 
 <body>
+
     <div class="affText">
         <h3>@Model.AffirmationText</h3>
     </div>
@@ -66,24 +70,9 @@
         @using (Html.BeginForm("DeleteAffirmation", "Affirmation", "Post"))
         {
             <input type="hidden" asp-for="ID" value="@Model.ID" />
-            <input style="padding:20px" type="submit" onclick="return confirm('Are you sure? We won't be able to restore it.')" value="Delete Affirmation" />
+            <input type="submit" onclick="return confirm('Are you sure?')" value="Delete Affirmation" class="btn-hover color-1" />
         }
     </div>
-
-
-    @*   <div style="display: block">
-        @using (Html.BeginForm("DeleteAffirmation", "Affirmation", "Post"))
-        {
-        <input type="hidden" asp-for="ID" value="@Model.ID" />
-        <div class="udbuttons">
-        <div class="action_btn">
-        <a type="submit" href="/Affirmation/UpdateAffirmationTxt/@Model.ID" class="btn-hover.color-4" value="Update this Affirmation" />
-        <input type="submit" onclick="return confirm('Are you sure? We won't be able to restore it.')" value="Delete Affirmation" />
-        </div>
-        </div>
-        </div>*@
-
-
 
 </body>
 

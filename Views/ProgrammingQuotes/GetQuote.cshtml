@@ -1,0 +1,9 @@
+﻿@model ProgrammingQuotes
+
+       
+        @using (Html.BeginForm("Index", "ProgrammingQuotesController", "Get"))
+        {
+
+            <h3 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><label asp-for="Quote" type="text" value="@Model.Quote" /></h3>
+        }
+ 
