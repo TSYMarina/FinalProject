@@ -1,6 +1,10 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Addl Advice";
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=PT+Serif:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 }
 
 
@@ -11,62 +15,79 @@
     }
 
     .fit {
-
         padding-block: 10px;
+        padding-bottom: 50px;
     }
 
     body {
-        padding-bottom: 50px;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: url("/images/moon-1807743.jpg");
+        background-size: cover;
+        font-family: 'Lobster', 'PT Serif','Book Antiqua';
+        background-repeat: no-repeat;
+        -webkit-text-size-adjust: auto;
+    }
+
+    .text-block {
+        background-color: aliceblue;
+        color: black;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 </style>
 
-<body>
 
-    <div class="fit">
-        <h5 class="spacing">Like any journey, the outcomes will depend on your preparation and how you behave during the process. These are the best things you can pack for this trip:</h5>
-        <ol>
-            <li>
-                <strong>Be open to receiving and ask for help.</strong>
-                <ul TYPE="square">
-                    <li>Support from family and friends will be very handy. The more time you are able to spend with your instructors, studying independently, reading books on coding, watching videos, reviewing code – the better.
-                    <li>
-                        Take advantage of one-on-one sessions with instructors, ask questions during the class.
-                </ul>
-            <li>
-                <strong>Trust Yourself. </strong>
-                <ul TYPE="square">
-                    <li>Know that you made the right decision. You chose the right school, right course, at the right time. Any kind of doubting is distracting and affects productivity negatively.
-                    <li>Listen to yourself. Frustration may be a sign of fatigue. Get enough rest, revisit a problem later, ask for help.
-                </ul>
-            <li>
-                <strong>Trust the process.</strong>
-                <ul TYPE="square">
-                    <li>Know that it is not needed to memorize every piece of syntax, language rule and gain deep understanding of algorithms on the spot. You WILL get enough practice during the course and it WILL all come together.
-                    <li>TrueCoders offer a very well-structured course with a clear roadmap. Lessons are consistent, lectures provide solid foundation, exercises offer practice opportunities, and project-based learning component challenges you to explore additional tools and solidify the knowledge and practical skills. I personally found it helpful to watch TrueCoders lecture recordings the night before for topics.
-                </ul>
-        </ol>
-        <h6 class="spacing">
-            You will gain new friends in this process – both in human and electronic form. Here is a list of those to befriend early on:
-        </h6>
-        <ul>
-            <li>Your welcome email from TrueCoders and prep-class labs. The email contains great advice on what to do to prepare for the course best. Going through the recommended learning platform modules helps with gaining familiarity with terminology and concepts. You are NOT expected to complete all modules or know everything covered in the course.
-            <li>GitHub (github.com) – to save your ongoing projects back-ups, store and host your digital portfolio, it is a great platform for collaboration and research of code examples.
-            <li>
-                Visual Studio Community and Visual Studio Code – programs you may download for free to create your projects.
-            </li>
-        </ul>
-        <h6>In addition to TrueCoders platform and lecture materials you may expect to utilize:</h6>
-        <ul>
-            <li>https://docs.microsoft.com/en-us/dotnet/csharp/ - words of wisdom from the Creators of C# laid out concisely in many thousands of pages.
-            <li>https://www.w3schools.com/ - well-structured learning platform great for foundational information.
-            <li>https://stackoverflow.com/ (search content) – free and public collection of questions and answers. Be sure to include C# in the search criteria and get insight from answers, not questions. These are posted by humans, so testing answers is the key.
-            <li>codepen.io – is great for code examples. Utilize “Analyze” option before implementing same code as there may be errors.
-        </ul>
-        <h6>Every company is a software company these days. You are not just embracing a “software mentality”, you are making strong strides to upgrade from a consumer to a developer. Creator of better technologies. Growing can be hard but you can do it! You are doing it :) </h6>
-    </div>
+<div class="fit text-block">
+    <br>
+    <h5 class="spacing">Like any journey, the outcomes will depend on your preparation and how you behave during the process. These are the best things you can pack for this trip:</h5>
+    <br>
+    <ol>
+        <li>
+            <strong>Be open to receiving and ask for help.</strong>
+            <ul TYPE="square">
+                <li>Support from family and friends will be very handy. The more time you are able to spend with your instructors, studying independently, reading books on coding, watching videos, reviewing code – the better.
+                <li>
+                    Take advantage of one-on-one sessions with instructors, ask questions during the class.
+            </ul>
+        <li>
+            <strong>Trust Yourself. </strong>
+            <ul TYPE="square">
+                <li>Know that you made the right decision. You chose the right school, right course, at the right time. Any kind of doubting is distracting and affects productivity negatively.
+                <li>Listen to yourself. Frustration may be a sign of fatigue. Get enough rest, revisit a problem later, ask for help.
+            </ul>
+        <li>
+            <strong>Trust the process.</strong>
+            <ul TYPE="square">
+                <li>Know that it is not needed to memorize every piece of syntax, language rule and gain deep understanding of algorithms on the spot. You WILL get enough practice during the course and it WILL all come together.
+                <li>TrueCoders offer a very well-structured course with a clear roadmap. Lessons are consistent, lectures provide solid foundation, exercises offer practice opportunities, and project-based learning component challenges you to explore additional tools and solidify the knowledge and practical skills. I personally found it helpful to watch TrueCoders lecture recordings the night before for topics.
+            </ul>
+    </ol>
+    <h6 class="spacing">
+        You will gain new friends in this process – both in human and electronic form. These are some to befriend early on:
+    </h6>
+    <ul>
+        <li>Your welcome email from TrueCoders and prep-class labs. The email contains great advice on what to do to prepare for the course best. Going through the recommended learning platform modules helps with gaining familiarity with terminology and concepts. You are NOT expected to complete all modules or know everything covered in the course.
+        <li>GitHub (github.com) – to save your ongoing projects back-ups, store and host your digital portfolio, it is a great platform for collaboration and research of code examples.
+        <li>
+            Visual Studio Community and Visual Studio Code – programs you may download for free to create your projects.
+        </li>
+    </ul>
+    <h6>In addition to TrueCoders platform and lecture materials you may expect to utilize:</h6>
+    <ul>
+        <li>https://docs.microsoft.com/en-us/dotnet/csharp/ - words of wisdom from the Creators of C# laid out concisely in many thousands of pages.
+        <li>https://www.w3schools.com/ - well-structured learning platform great for foundational information.
+        <li>https://stackoverflow.com/ (search content) – free and public collection of questions and answers. Be sure to include C# in the search criteria and get insight from answers, not questions. These are posted by humans, so testing answers is the key.
+        <li>codepen.io – is great for code examples. Utilize “Analyze” option before implementing same code as there may be errors.
+    </ul>
+    <h6>Every company is a software company these days. You are not just embracing a “software mentality”, you are making strong strides to upgrade from a consumer to a developer. Creator of better technologies. Growing can be hard but you can do it! You are doing it :) </h6>
+
+    <p class="fit" style="text-align:center">
+        <img class="m-1" src=~/images/youCanDoItBlueIcon.JPG />
+    </p>
+</div>
 
 
-
-</body>
 

@@ -1,21 +1,23 @@
 ﻿@model Affirmations
 
+
 <style>
 
     .createheader {
-        color: floralwhite;
+        color: lightcyan;
         font-feature-settings: "swsh";
         padding-top: 50px;
     }
 
 
     .crbody {
-        background-image: url("/images/moon-1807743.jpg");
+        background: url("/images/06.JPG");
         background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .label {
-        color: white;
+        color: ghostwhite;
         padding-top: 50px;
         font-family: 'Arial Rounded MT';
         font-weight: 500;
@@ -24,7 +26,7 @@
 </style>
 
 <body class="crbody">
-    <div class="hrcenter">
+    <div>
         <h2 class="createheader">Create a New Affirmation</h2>
 
         @using (Html.BeginForm("InsertAffirmationToDatabase", "Affirmation", "Post"))
@@ -42,7 +44,8 @@
                     }
                 </select>
             </div>
-            <input class="btn-hover color-9" type="submit" value="Create New Afirmation" />
+
+            <input class="btn-hover color-5" type="submit" value="Add Your Afirmation" />
         }
     </div>
 </body>
