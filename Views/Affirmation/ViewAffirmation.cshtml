@@ -10,39 +10,48 @@
     .affText {
         color: white;
         padding-block: 100px;
+        text-align: center;
     }
 
     body {
-        font-family: "Arial Rounded MT";
-        text-align: center;
-        background: url("/images/unsplash.jpg") no-repeat center center fixed;
-        /*Stoic Script, Proxima Nova, Atrament, Adobe Garamond, PT Sans, Century School, Republic;*/
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: url("/images/unsplash.jpg");
+        background-size: cover;
+        align-content: center;
+        background-repeat: no-repeat;
+        /*        height: 100%;
+                        width: 100%;
+                        font-family: "Arial Rounded MT";
+                        text-align: center;
+                        background-image: url("/images/unsplash.jpg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;*/
     }
 
 </style>
 
-<body>
+<div class="affText">
+    <h3>@Model.AffirmationText</h3>
+</div>
+<div style="display: block">
+    <a href="/Affirmation/UpdateAffirmationTxt/@Model.ID" class="updateAff hrcenter"">Update this Affirmation Text</a>
+</div>
+<br>
+<br>
+<br>
+<div style="display: block" class="hrcenter">
+    @using (Html.BeginForm("DeleteAffirmation", "Affirmation", "Post"))
+    {
+        <input type="hidden" asp-for="ID" value="@Model.ID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete Affirmation" class="btn-hover color-1" />
+    }
+</div>
 
-    <div class="affText">
-        <h3>@Model.AffirmationText</h3>
-    </div>
 
-    <div style="display: block">
-        <a href="/Affirmation/UpdateAffirmationTxt/@Model.ID" class="updateAff">Update this Affirmation Text</a>
-    </div>
-    <br>
-    <br>
 
-    <br>
-    <div style="display: block ">
-        @using (Html.BeginForm("DeleteAffirmation", "Affirmation", "Post"))
-        {
-            <input type="hidden" asp-for="ID" value="@Model.ID" />
-            <input type="submit" onclick="return confirm('Are you sure?')" value="Delete Affirmation" class="btn-hover color-1" />
-        }
-    </div>
-
-</body>
 
 
 

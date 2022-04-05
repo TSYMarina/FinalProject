@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FinalProject.Models;
 using System.Linq;
+using System.Threading.Tasks;
+using System;
 
 namespace FinalProject.Controllers
 {
@@ -18,6 +20,19 @@ namespace FinalProject.Controllers
         {
             var affirmations = repo.GetAllAffirmations();
             return View(affirmations);
+        }
+
+        [HttpGet]
+        public IActionResult Index(string AffirmSearch)
+        {
+            ViewData["GetAffirms"] = AffirmSearch;
+
+            var affirmQuery = from a in repo.GetAllAffirmations().ToList() select a;
+            if (!String.IsNullOrEmpty(AffirmSearch))
+            {
+                affirmQuery = affirmQuery.Where(a => a.Category.Contains(AffirmSearch) || a.AffirmationText.Contains(AffirmSearch));
+            }
+            return View(affirmQuery);
         }
 
         public IActionResult ViewAffirmation(int id)
@@ -59,7 +74,7 @@ namespace FinalProject.Controllers
             return View(affirm);
         }
 
-        public IActionResult InsertAffirmationToDatabase (Affirmations affirm)
+        public IActionResult InsertAffirmationToDatabase(Affirmations affirm)
         {
             repo.InsertAffirmation(affirm);
 
@@ -67,6 +82,4 @@ namespace FinalProject.Controllers
         }
 
     }
-
-
 }

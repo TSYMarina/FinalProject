@@ -44,14 +44,13 @@
         background-image: url(/images/04.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+
     }
 
     .createbtn {
         height: 100px;
         position: relative;
-        /*        border: 1px;
-            box-shadow: 1px 5px 5px #1a1a1a;
-            transition: 0.25s;*/
+        padding: 15px;
     }
 
     .hrcenter {
@@ -92,19 +91,33 @@
 
 </style>
 
-
 <header>
     <h2 class="affindexheader">Affirmations</h2>
 
 </header>
 
-<div class="hrcenter">
+<div class="hrcenter" style="padding-block:75px">
     <a class="createbtn btn-hover color-1" href="/Affirmation/InsertAffirmation/">Create a New Affirmation</a>
 </div>
 <br>
-<br />
+<br>
+<br>
+<br>
 
+<form method="get" asp-action="Index">
 
+    <div class="row">
+        <div class="col-sm-12" style="padding-top:70px">
+            <div class="form-inline position-relative">
+                <input type="search" placeholder="search in category name and affirmation text" value="@ViewData["GetAffirms"]" name="AffirmSearch" style="width:500px" />
+                <input type="submit" value="Search" class="btn-hover color-7" style="height: 25px" />
+                <a asp-action="Index" class="btn-hover color-3" style="height: 25px">Get All Affirmations</a>
+            </div>
+        </div>
+        <div id="grdAffirms"></div>
+    </div>
+
+</form>
 <div class="affirmstable">
     <table id="myTable">
         <tr>
@@ -120,9 +133,6 @@
                 <td class="affirm">@affirmation.AffirmationText</td>
                 <td style="text-align:right">@affirmation.Category</td>
             </tr>
-
         }
     </table>
-
 </div>
-

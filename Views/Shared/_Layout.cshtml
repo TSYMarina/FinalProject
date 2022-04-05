@@ -4,18 +4,22 @@
 <style>
 
     .navbarimg {
-        border-radius: 50%;
+        border-radius: 30%;
+        float: right;
     }
 
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 75px;
-        background: #009EDB;
+    .imgfloat {
+        float: right;
+    }
+
+    body {
+        margin: 0;
+        padding-bottom: 10px;
+        height: 100%;
     }
 
 </style>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,26 +66,25 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="container mb-5">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="align-content-center p-3">
+            &copy; 2022 - Marina's Final Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <img class="m-4 imgfloat" src=~/images/youCanDoItBlueIcon.JPG>
+        </div>
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
-    <footer class="border-top footer text-muted">
-
-        &copy; 2022 - Marina's Final Project - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="padding-right: 185px">Privacy</a>
-        <img src=~/images/youCanDoItBlueIcon.JPG>
-
-    </footer>
-
 </body>
-
-
-
 </html>
