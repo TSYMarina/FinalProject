@@ -29,6 +29,11 @@ namespace FinalProject.Controllers
             return View();
         }
 
+        public IActionResult Words()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -5,9 +5,7 @@
     <link rel="stylesheet" href="site.css">
 }
 
-
 <style>
-
 
     .header {
         text-align: center;
@@ -15,7 +13,7 @@
         line-height: 80px;
         margin-top: 24px;
         margin-bottom: 24px;
-        padding: 2px 60px;
+        padding: 20px 60px;
         font-family: Arial Black, sans-serif;
     }
 
@@ -25,6 +23,10 @@
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
+    }
+
+    .refreshbtn {
+        height: 50px;
     }
 
     body {
@@ -59,8 +61,8 @@
     }
 
     .humor {
-        padding-block: 40px;
-        margin-top: 150px;
+        padding-block: 20px;
+        margin-top: 50px;
     }
 
     body {
@@ -68,14 +70,34 @@
         background-color: white;
     }
 
-    .myAdvice {
-        padding-top: 60px;
-        border: 60px;
+    .collapsible {
+        padding-top: 5px;
+        background-color: navy;
+        color: white;
+        cursor: copy;
+        text-align: center;
+        outline: ridge;
+        width: 100%;
     }
+
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+
+    .myAdvice {
+        padding: 50px;
+    }
+
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+    }
+
 
     .vidtable {
         border-spacing: 60px;
-        margin-top: 150px;
+        margin-top: 50px;
     }
 
 </style>
@@ -87,28 +109,45 @@
     </div>
 
 
-    <div class="text-center">
-        <h3 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">@Model</h3>
+    <div class="text-left">
+        <h4 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">@Model</h4>
 
-        <h4 style="margin-block: 10px">
-            <a class="btn-hover color-8 height:50px" asp-area="" asp-controller="Home" asp-action="Index">Get New Quote</a>
-        </h4>
+        <div class="refreshbtn">
+            <a class="btn-hover color-8" asp-area="" asp-controller="Home" asp-action="Index">Get New Quote</a>
+        </div>
     </div>
 
-    <div class="myAdvice">
-        <h4> Words of wisdom from a beat up almost-alumni to come... </h4>
+    <button type="button" class="collapsible">Greetings! Click here on your first visit :)</button>
+    <div class="content">
+        <div class="myAdvice">
+            <h3 class="spacing" style="color:navy">Hello new TrueCoder!</h3>
+
+            <h5 class="spacing">
+                <strong>You did it! </strong>You made the decision to enroll in a bootcamp program and you may have stepped out of your comfort zone. Whether it is not having background in coding, or not having prior college or bootcamp experience, or both and more - it is going to be a great and enlightening experience. It will be everything you read or heard about it, and none of it. The decision is made, and the best you can do is to put all concerns, fears and negative opinions in a box, lock it and loose the key to it. This one is staying behind.
+                <br><br>
+                What you may certainly expect is that you will learn lots and grow professionally and emotionally. Make some room for that!
+            </h5><br>
+            <h5 style="text-align:center">
+                <strong>Be sure to reward yourself, take care of yourself for all the hard work you are doing. This website contains some things that I found helpful.</strong>
+                <h5>
+                    <br>Understanding that the more you learn, the more there is to know in tech WHILE every bit (or kilobyte) makes you richer as a professional has definitely been one of the core realizations. Best of luck to you, new TrueCoder! Sky is the limit and You can do great things with the new knowledge you are gaining daily.
+                </h5>
+        </div>
     </div>
-
-
 
     <div class="humor">
         <div class="console-container">
             <span id="text"></span><div class="console-underscore" id="console">&#95;</div>
-            <h5>
-                I have a good joke about programming, but it only works on my computer.
-            </h5>
-            <h5 class="card-title"><a target="_blank" href="https://programmerhumor.io/">Check out this webpage with Programming Jokes</a></h5>
 
+
+            <h4>
+                I have a good joke about programming, but it only works on my computer.
+            </h4>
+
+            <h5 class="card-title"><a target="_blank" href="https://programmerhumor.io/">Check out this webpage with Programming Jokes</a></h5>
+            <h5>
+                Shhhh! It is not procrastimating! It is giving your brain some rest.
+            </h5>
         </div>
     </div>
 
@@ -121,7 +160,6 @@
 
         <td>
             <iframe width="400" height="235" src="https://www.youtube-nocookie.com/embed/_4kHxtiuML0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
         </td>
         <td>
@@ -137,39 +175,19 @@
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 
+<script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
 
-
-@*        <table class="table">
-    <tr>
-    <th><button class="btn-hover color-5"><a target="_blank" href="https://www.youtube-nocookie.com/embed/zJNMNENMES4">POSITIVE VIBRATIONS - separate window</a></button></th>
-    <th><button class="btn-hover color-3"><a target="_blank" href="https://www.youtube-nocookie.com/embed/3q8thydY9bI">BRAIN ACTIVITY - separate window</a></button></th>
-
-    </tr>
-    <td>
-    <iframe width="400" height="235" src="https://www.youtube-nocookie.com/embed/zJNMNENMES4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
-    <br>
-    </td>
-
-    <td><iframe width="400" height="235" src="https://www.youtube-nocookie.com/embed/3q8thydY9bI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
-
-    </tr>
-    </table>*@
-
-
-@*<table class="table">
-    <h3>Helpful Tutorials</h3>
-
-    <tr>
-    <th>ASP .NET - Styling </th>
-    <th>APIs and Postman</th>
-
-    </tr>
-    </table>
-    <table class="table">
-    <td><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9lJF47kFRcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
-
-
-    <td><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VywxIQ2ZXw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
-
-    </table>*@
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+    }
+</script>

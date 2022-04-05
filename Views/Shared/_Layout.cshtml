@@ -7,7 +7,7 @@
         border-radius: 50%;
     }
 
-    .ftr {
+    footer {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -41,6 +41,10 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link navcustom" asp-area="" asp-controller="Home" asp-action="Words">Additional Advice</a>
+
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link navcustom" asp-area="" asp-controller="Affirmation" asp-action="Index">Affirmations</a>
 
                         </li>
@@ -50,8 +54,8 @@
                     </ul>
 
                 </div>
-                <div >
-                  <img src=~/images/heart-shaped-clouds-backgroundIcon.jpg class="navbarimg">  
+                <div>
+                    <img src=~/images/heart-shaped-clouds-backgroundIcon.jpg class="navbarimg">
                 </div>
 
             </div>
@@ -68,13 +72,16 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <footer class="border-top footer text-muted">
+
+        &copy; 2022 - Marina's Final Project - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="padding-right: 185px">Privacy</a>
+        <img src=~/images/youCanDoItBlueIcon.JPG>
+
+    </footer>
+
 </body>
 
-<footer class="border-top footer text-muted ftr">
-    <div class="container">
-        &copy; 2022 - FinalProject - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="padding-right: 185px">Privacy</a>
-        <img src=~/images/youCanDoItBlueIcon.JPG>
-    </div>
-</footer>
+
 
 </html>
